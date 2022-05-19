@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,700&family=Poppins:wght@300;400;700&display=swap');
+
+section {
+  @apply px-5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer-nav .nav-item {
+  @apply text-white hover:text-white py-2 block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.brand-font {
+  font-family: 'Merriweather', serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bg-image {
+  @apply bg-cover	bg-no-repeat bg-center;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-item {
+  @apply text-gray-600 hover:text-green-500 text-lg py-1 mx-1 lg:py-2 lg:mx-3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-item {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#f97316, #f97316);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .5s ease-in-out;
 }
+
+
+
+.active {
+  @apply text-green-500;
+}
+
+.nav-item:hover, .active {
+  background-size: 100% 3px;
+  background-position: 0 100%
+}
+
+.footer-nav nav  {
+  @apply justify-start;
+ }
+
+.footer-nav a  {
+ @apply px-0 mx-0;
+}
+
